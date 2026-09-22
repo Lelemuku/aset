@@ -55,33 +55,6 @@
     if (n) n.innerHTML = '<span>Link copied!</span>';
   };
 
-  /* ---------- Table of Contents Generator ---------- */
-  window.medianTOC = function () {
-    var el = document.getElementById('post-body');
-    if (!el) return;
-
-    var a = 1, b = 0, c = '';
-
-    el.innerHTML = el.innerHTML.replace(
-      /<h([\d]).*?>(\n.*?|.*?)<\/h([\d]).*?>/gi,
-      function (d, e, f, g) {
-        if (e != g) return d;
-        if (e > a) c += new Array(e - a + 1).join("<ol class='point" + a + "'>");
-        else if (e < a) c += new Array(a - e + 1).join('</ol></li>');
-        b += 1;
-        var id = f.replace(/[^a-z0-9]/gi, ' ').trim().replace(/\s/g, '');
-        c += '<li><a href="#' + id + '" title="' + f + '">' + f.replace(/[^a-z0-9]/gi, ' ') + '</a>';
-        a = parseInt(e, 10);
-        return "<h" + e + " id='" + id + "'>" + f + "</h" + g + ">";
-      }
-    );
-
-    if (a) c += new Array(a + 1).join('</ol>');
-
-    var toc = document.getElementById('post-tocContent');
-    if (toc) toc.innerHTML += c;
-  };
-
   /* ---------- Read Time Estimator ---------- */
   function getText(el) {
     var ret = '';
@@ -212,11 +185,6 @@
 
     initReadTime();
     initLoadMore();
-
-    // TOC must run AFTER post body rendered
-    if (document.getElementById('post-body') && document.getElementById('post-tocContent')) {
-      try { window.medianTOC(); } catch (e) {}
-    }
   }
 
   if (document.readyState === 'loading') {
