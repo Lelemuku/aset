@@ -173,7 +173,7 @@
   function boot() {
     stripM1();
 
-    // Apply dark mode from localStorage as early as possible
+    // Apply dark mode from localStorage
     var saved = localStorage.getItem('mode');
     var main = document.querySelector('#mainContent');
     if (main && saved === 'darkmode') main.classList.add('dark-mode');
