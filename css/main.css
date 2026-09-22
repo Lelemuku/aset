@@ -685,28 +685,6 @@ header .searchbar input[type=text]:focus + .search-button + .navicon.search{top:
 .Blog input[id*="check1"]:checked ~ .post .post-entry{font-size:14px}
 .Blog input[id*="check3"]:checked ~ .post .post-entry{font-size:18px}
 
-/* ---------- Table of Contents ---------- */
-.Blog .post-toc{width:360px;height:100%;padding:90px 30px 60px;background-color:var(--body-bg-colors);position:fixed;top:0;right:0;z-index:2;font-size:15px;-webkit-transition:all .1s ease;transition:all .1s ease}
-.Blog .post-toc:hover{overflow-y:auto}
-.Blog .post-tocContainer,.Blog .post-tocHeader{position:relative}
-.Blog .post-tocHeader label{display:flex;align-items:center;font-weight:700;font-family:var(--heading-font);margin:0;color:var(--main-colors)}
-.Blog .post-tocHeader label svg.drop{margin-left:auto;width:18px;height:18px;-webkit-transform:rotate(-90deg);transform:rotate(-90deg);-webkit-transition:all .2s ease;transition:all .2s ease}
-.Blog .post-tocHeader label .show{width:50px;height:40px;display:flex;align-items:center;justify-content:center;background-color:#fefefe;border-radius:50px 0 0 50px;box-shadow:0 10px 20px 0 rgba(30,30,30,.08);position:absolute;top:0;left:-80px;-webkit-transition:all .2s ease;transition:all .2s ease;opacity:0;visibility:hidden}
-.Blog .post-tocHeader label .show:before{content:'';display:block;width:12px;height:12px;background-color:var(--icon-link-colors);border:2px solid #fefefe;border-radius:50%;position:absolute;top:7px;left:12px}
-.Blog .post-tocContent a,.Blog .daftar-isi .isi-content a{font-weight:400;color:var(--text-colors)}
-.Blog .post-tocContent ol,.Blog .daftar-isi .isi-content ol,.Blog .daftar-isi .isi-content ul{padding:0;list-style:none;font-size:14px;font-weight:400;line-height:1.6em;counter-reset:toc-count}
-.Blog .post-tocContent li,.Blog .daftar-isi .isi-content li{display:flex;flex-wrap:wrap}
-.Blog .post-tocContent li ol,.Blog .daftar-isi .isi-content li ol,
-.Blog .post-tocContent li ul,.Blog .daftar-isi .isi-content li ul{width:100%;padding-left:26px;margin-bottom:10px;margin-top:5px}
-.Blog .post-tocContent li a:before,.Blog .post-tocContent li span:before,
-.Blog .daftar-isi .isi-content li a:before,.Blog .daftar-isi .isi-content li span:before{content:counters(toc-count,'.')'. ';counter-increment:toc-count;display:inline-block;min-width:20px;margin-right:5px;color:var(--text-colors);flex-shrink:0;font-weight:700;font-family:var(--heading-font)}
-.Blog .post-tocContent li > *{flex-grow:0;display:block;white-space:normal;overflow:hidden;text-overflow:ellipsis}
-.Blog .post-tocContent li > a,.Blog .post-tocContent li > span{display:flex;flex-grow:1;width:100%}
-.Blog .toc-menu:checked + .post-toc{right:-360px}
-.Blog .toc-menu:checked + .post-toc:hover{overflow:visible}
-.Blog .toc-menu:checked + .post-toc .post-tocHeader label .show{opacity:1;visibility:visible}
-.dark-mode .Blog .post-tocHeader label svg.line{stroke:var(--icon-alt-colors)}
-
 /* ---------- Related Posts ---------- */
 .nav-menu:checked + .mainWrapper.post .Blog .related-posts li{width:calc(25% - 15px)}
 .nav-menu:checked + .mainWrapper.post .Blog .related-posts li:nth-of-type(3n){margin-right:20px}
@@ -732,16 +710,16 @@ header .searchbar input[type=text]:focus + .search-button + .navicon.search{top:
 .error-container p{margin:15px 5% 30px;font-size:16px;line-height:1.4em}
 .error-container .button{margin:0;padding:1em 2em;font-size:1em;font-weight:700;font-family:var(--heading-font);line-height:1.2em}
 
-/* ---------- Dark Mode (Extended) ---------- */
-.dark-mode,.dark-mode .Blog .post-toc,.dark-mode .Blog .post-tabsHeader > *:after{background-color:var(--dark-bg-colors)}
+/* ---------- Dark Mode ---------- */
+.dark-mode,.dark-mode .Blog .post-tabsHeader > *:after{background-color:var(--dark-bg-colors)}
 .dark-mode header .navicon > * svg,.dark-mode header .navicon.search svg,.dark-mode header .searchbar .search-button svg,.dark-mode .Blog .post-info .post-comment > * svg,.dark-mode .FeaturedPost .item-comment > * svg,.dark-mode .PopularPosts .item-comment > * svg,.dark-mode .Label li a svg,.dark-mode .Label .label-show label svg,.dark-mode .Profile .solo .profile-media li svg,.dark-mode .Blog .post-shareIcon > * svg{fill:var(--dark-sec-colors)}
-.dark-mode header .navicon > * svg.line,.dark-mode header .navicon.search svg.line,.dark-mode header .searchbar .search-button svg.line,.dark-mode .Blog .post-info .post-comment > * svg.line,.dark-mode .FeaturedPost .item-comment > * svg.line,.dark-mode .PopularPosts .item-comment > * svg.line,.dark-mode .Label li a svg,.dark-mode .Label .label-show label svg.line,.dark-mode .Profile .solo .profile-media li svg.line,.dark-mode .Blog .post-shareIcon > * svg.line,.dark-mode .Blog .post-tocHeader label svg.drop,.dark-mode .Blog .post-shareIcon > * svg.line{fill:none;stroke:var(--dark-sec-colors)}
-.dark-mode,.dark-mode .Blog .blog-pager,.dark-mode .Blog .post-pagenav,.dark-mode .Label .widget-content,.dark-mode h1,.dark-mode h2,.dark-mode h3,.dark-mode h4,.dark-mode h5,.dark-mode h6,.dark-mode .FollowByEmail .title,.dark-mode .Profile .solo .profile-link,.dark-mode .Profile .team .team-member a .profile-name,.dark-mode .Profile .team .more-member > span,.dark-mode .Blog .sitemaps .judul,.dark-mode .Blog .sitemaps li a,.dark-mode .Blog .daftar-isi .isi-judul,.dark-mode .Blog .spoiler .spoiler-judul,.dark-mode .Blog .daftar-isi .isi-content a,.dark-mode .Blog .accordion .accor-title .title,.dark-mode .Blog .related-posts li .item-title,.dark-mode .Blog .post-tocHeader label,.dark-mode .Blog .post-tocContent a,.dark-mode .Blog .post-shareIcon > *,.dark-mode .Blog .post-authorsName{color:var(--dark-colors)}
+.dark-mode header .navicon > * svg.line,.dark-mode header .navicon.search svg.line,.dark-mode header .searchbar .search-button svg.line,.dark-mode .Blog .post-info .post-comment > * svg.line,.dark-mode .FeaturedPost .item-comment > * svg.line,.dark-mode .PopularPosts .item-comment > * svg.line,.dark-mode .Label li a svg,.dark-mode .Label .label-show label svg.line,.dark-mode .Profile .solo .profile-media li svg.line,.dark-mode .Blog .post-shareIcon > * svg.line,.dark-mode .Blog .post-shareIcon > * svg.line{fill:none;stroke:var(--dark-sec-colors)}
+.dark-mode,.dark-mode .Blog .blog-pager,.dark-mode .Blog .post-pagenav,.dark-mode .Label .widget-content,.dark-mode h1,.dark-mode h2,.dark-mode h3,.dark-mode h4,.dark-mode h5,.dark-mode h6,.dark-mode .FollowByEmail .title,.dark-mode .Profile .solo .profile-link,.dark-mode .Profile .team .team-member a .profile-name,.dark-mode .Profile .team .more-member > span,.dark-mode .Blog .sitemaps .judul,.dark-mode .Blog .sitemaps li a,.dark-mode .Blog .daftar-isi .isi-judul,.dark-mode .Blog .spoiler .spoiler-judul,.dark-mode .Blog .daftar-isi .isi-content a,.dark-mode .Blog .accordion .accor-title .title,.dark-mode .Blog .related-posts li .item-title,.dark-mode .Blog .post-shareIcon > *,.dark-mode .Blog .post-authorsName{color:var(--dark-colors)}
 .dark-mode header,.dark-mode .Blog article,.dark-mode .Blog .blog-pager .no-post,.dark-mode .Blog .post-pagenav .current,.dark-mode .FeaturedPost article,.dark-mode .Profile .solo .profile-media,.dark-mode .mainMenu,.dark-mode .navMenu .sosmed,.dark-mode .Blog .related-posts li,.dark-mode .Blog .comments-content > ol > li{background-color:var(--dark-bg-sec-colors)}
 .dark-mode header .searchbar input[type=text],.dark-mode .Blog .post-thumbnail a,.dark-mode .FeaturedPost .item-thumbnail a,.dark-mode .PopularPosts .item-thumbnail a,.dark-mode .Profile .solo .profile-image,.dark-mode .widget input[type=email],.dark-mode .widget input[type=text],.dark-mode .widget textarea,.dark-mode .Blog .related-posts li .item-thumbnail > *,.dark-mode .Blog .comments-content > ol > li > .comment-replies{background-color:var(--dark-bg-hov-colors)}
 .dark-mode header .navicon .nav i,.dark-mode .Blog .accordion .accor-title .accor-icon:before,.dark-mode .Blog .accordion .accor-title .accor-icon:after{background-color:var(--dark-colors)}
 .dark-mode svg,.dark-mode header,.dark-mode .navMenu,.dark-mode .navMobile,.dark-mode .navMenu li .link svg,.dark-mode .navMenu .sosmed ul svg{color:var(--dark-colors);fill:var(--dark-colors)}
-.dark-mode header .navicon .dark-switch,.dark-mode .widget-title a,.dark-mode .FeaturedPost .item-header,.dark-mode .PopularPosts .item-header,.dark-mode .PopularPosts .no-thumbnail:before,.dark-mode .Profile .solo .profile-text,.dark-mode .Label .label-count,.dark-mode .Label .cloud a,.dark-mode .FollowByEmail .follow-text,.dark-mode .button.outline,.dark-mode .Blog .sitemaps li:before,.dark-mode .Blog .sitemaps li a:after,.dark-mode .Blog blockquote.style-1:before,.dark-mode .Blog .post-info,.dark-mode .Blog .blog-pager .no-post,.dark-mode .Blog .post .post-info .post-author,.dark-mode .Blog .post .post-info .post-published,.dark-mode .Blog .daftar-isi .isi-judul:after,.dark-mode .Blog .daftar-isi .isi-content ol li:before,.dark-mode .Blog .post-tocContent ol li:before,.dark-mode .Blog .separate:before,.dark-mode .error-container p,.dark-mode .footbar,.dark-mode .Blog .post-tocContent li a:before,.dark-mode .Blog .daftar-isi .isi-content li a:before,.dark-mode .Blog .daftar-isi .isi-content li span:before,.dark-mode .Blog .post .post-labels a,.dark-mode .Blog .post-authorsName:before,.dark-mode .Blog .post-authorsDesc,.dark-mode .Blog .comments-title .label-sort,.dark-mode .Blog .comment-actions a,.dark-mode .Blog .comment-reply a,.dark-mode .Blog .thread-toggle,.dark-mode .Blog .comments-content .comment-header .datetime,.dark-mode .Blog .comments-content .comment-header .datetime:before{color:var(--dark-sec-colors)}
+.dark-mode header .navicon .dark-switch,.dark-mode .widget-title a,.dark-mode .FeaturedPost .item-header,.dark-mode .PopularPosts .item-header,.dark-mode .PopularPosts .no-thumbnail:before,.dark-mode .Profile .solo .profile-text,.dark-mode .Label .label-count,.dark-mode .Label .cloud a,.dark-mode .FollowByEmail .follow-text,.dark-mode .button.outline,.dark-mode .Blog .sitemaps li:before,.dark-mode .Blog .sitemaps li a:after,.dark-mode .Blog blockquote.style-1:before,.dark-mode .Blog .post-info,.dark-mode .Blog .blog-pager .no-post,.dark-mode .Blog .post .post-info .post-author,.dark-mode .Blog .post .post-info .post-published,.dark-mode .Blog .daftar-isi .isi-judul:after,.dark-mode .Blog .daftar-isi .isi-content ol li:before,.dark-mode .Blog .separate:before,.dark-mode .error-container p,.dark-mode .footbar,.dark-mode .Blog .daftar-isi .isi-content li a:before,.dark-mode .Blog .daftar-isi .isi-content li span:before,.dark-mode .Blog .post .post-labels a,.dark-mode .Blog .post-authorsName:before,.dark-mode .Blog .post-authorsDesc,.dark-mode .Blog .comments-title .label-sort,.dark-mode .Blog .comment-actions a,.dark-mode .Blog .comment-reply a,.dark-mode .Blog .thread-toggle,.dark-mode .Blog .comments-content .comment-header .datetime,.dark-mode .Blog .comments-content .comment-header .datetime:before{color:var(--dark-sec-colors)}
 .dark-mode svg.line,.dark-mode svg .line,.dark-mode .navMenu li .link svg.line{fill:none;stroke:var(--dark-colors)}
 .dark-mode .button{color:var(--dark-colors)}
 .dark-mode .button.outline{border-color:var(--dark-colors)}
@@ -780,8 +758,6 @@ header .searchbar input[type=text]:focus + .search-button + .navicon.search{top:
   .mainbar{width:calc(100% - 380px)}
   .sidebar{width:380px}
   .nav-menu:checked + .mainWrapper .mainSection{padding-left:130px}
-  .Blog .post-toc{width:410px}
-  .Blog .toc-menu:checked + .post-toc{right:-410px}
 }
 @media screen and (min-width:1600px){
   body{font-size:15px}
@@ -836,9 +812,6 @@ header .searchbar input[type=text]:focus + .search-button + .navicon.search{top:
   .multipleItems .Blog article:nth-of-type(3n){margin-right:20px}
   .multipleItems .Blog article:nth-of-type(2n),
   .multipleItems .Blog article:nth-of-type(6n){margin-right:0}
-  .Blog .post-toc{width:325px;padding-left:25px;padding-right:25px}
-  .Blog .post-tocHeader label .show{left:-75px}
-  .Blog .toc-menu:checked + .post-toc{right:-325px}
   .nav-menu:checked + .mainWrapper.post .Blog .related-posts li{width:calc(33.333% - 13.333px)}
   .nav-menu:checked + .mainWrapper.post .Blog .related-posts li:nth-of-type(2n),
   .nav-menu:checked + .mainWrapper.post .Blog .related-posts li:nth-of-type(4n){margin-right:20px}
@@ -886,12 +859,6 @@ header .searchbar input[type=text]:focus + .search-button + .navicon.search{top:
   .nav-menu:checked + .mainWrapper.multipleItems .Blog article:nth-of-type(6n){margin-right:0}
   .dark-mode .mainMenu{background-color:transparent}
   .dark-mode .navMenu,.dark-mode .navMenu .close{background-color:var(--dark-bg-sec-colors)}
-  .Blog .post-tocHeader label,.Blog .post-tocContent{max-width:640px;margin-left:auto;margin-right:auto}
-  .Blog .post-toc{width:75%;max-width:480px;z-index:51;padding-top:60px;background-color:#fefefe;border-radius:10px 0 0 10px;box-shadow:0 6px 18px 0 rgba(30,30,30,.035)}
-  .Blog .post-toc + .full-close{visibility:visible;opacity:1;background-color:rgba(0,0,0,.25);z-index:50}
-  .Blog .post-tocHeader label .show{top:30px}
-  .Blog .toc-menu:checked + .post-toc{right:-480px}
-  .Blog .toc-menu:checked + .post-toc + .full-close{visibility:hidden;opacity:0}
   .Blog .post-font .post-fontContainer li label,header .navicon > *{cursor:default}
   .nav-menu:checked + .mainWrapper.post .Blog .related-posts li,.Blog .related-posts li{width:calc(33.333% - 10px)}
   .nav-menu:checked + .mainWrapper.post .Blog .related-posts li:nth-of-type(2n),.Blog .related-posts li:nth-of-type(2n),.Blog .related-posts li,
@@ -1007,5 +974,4 @@ header .searchbar input[type=text]:focus + .search-button + .navicon.search{top:
   .nav-menu:checked + .mainWrapper.post .Blog .related-posts li:nth-of-type(6n),.Blog .related-posts li:nth-of-type(6n){margin-right:0}
   .Blog .related-posts li{padding:8px 8px 12px;margin-bottom:12px}
   .Blog .related-posts li .item-title,.Blog .post-authorsName:before{font-size:11px}
-  .Blog .toc-menu:checked + .post-toc{right:-75%}
 }
